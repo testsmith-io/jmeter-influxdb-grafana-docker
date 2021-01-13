@@ -1,0 +1,31 @@
+version: '3.5'
+services:
+  influxdb:
+    image: influxdb:alpine
+    environment:
+      INFLUXDB_DB: jmeter_results
+    ports:
+     - "8086:8086"
+    networks:
+     - grafana-influxdb-network
+    volumes:
+     - ./influxdb/data:/var/lib/influxdb
+
+  grafana:
+    image: grafana/grafana:latest
+    depends_on:
+      - influxdb
+    volumes:
+      - ./grafana/provisioning/:/etc/grafana/provisioning/
+    ports:
+      - "3000:3000"
+    env_file:
+      - 'grafana.env'
+    links:
+      - influxdb
+    networks:
+      - grafana-influxdb-network
+
+networks:
+  grafana-influxdb-network:
+    driver: bridge
