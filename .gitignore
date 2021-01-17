@@ -1,2 +1,5 @@
+.idea
 influxdb/
 .DS_Store
+jmeter-scripts/results
+jmeter.log

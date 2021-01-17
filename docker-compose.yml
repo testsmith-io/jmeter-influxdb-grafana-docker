@@ -1,5 +1,7 @@
 version: '3.5'
 services:
+  jmeter:
+    build: jmeter-docker
   influxdb:
     image: influxdb:alpine
     environment:
