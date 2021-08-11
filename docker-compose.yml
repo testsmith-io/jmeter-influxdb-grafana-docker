@@ -1,17 +1,17 @@
 version: '3.5'
 services:
-  jmeter:
-    build: jmeter-docker
   influxdb:
-    image: influxdb:alpine
-    environment:
-      INFLUXDB_DB: jmeter_results
+    image: influxdb:1.7.5-alpine
     ports:
      - "8086:8086"
+     - 25826:25826/udp
     networks:
      - grafana-influxdb-network
     volumes:
+     - ./influxdb/influx_init.iql:/docker-entrypoint-initdb.d/influx_init.iql
+     - ./influxdb/types.db:/usr/share/collectd/types.db:ro
      - ./influxdb/data:/var/lib/influxdb
+     - ./influxdb/config/:/etc/influxdb/
 
   grafana:
     image: grafana/grafana:latest
