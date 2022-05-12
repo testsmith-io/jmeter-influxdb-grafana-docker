@@ -2350,8 +2350,8 @@
       {
         "current": {
           "selected": false,
-          "text": "InfluxDB",
-          "value": "InfluxDB"
+          "text": "jmeter",
+          "value": "jmeter"
         },
         "error": null,
         "hide": 0,
@@ -2362,7 +2362,7 @@
         "options": [],
         "query": "influxdb",
         "refresh": 1,
-        "regex": "",
+        "regex": "jmeter",
         "skipUrlSync": false,
         "type": "datasource"
       },

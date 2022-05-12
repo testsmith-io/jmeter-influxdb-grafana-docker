@@ -1,7 +1,7 @@
 version: '3.5'
 services:
   influxdb:
-    image: influxdb:1.7.5-alpine
+    image: influxdb:1.8.10-alpine
     ports:
      - "8086:8086"
      - 25826:25826/udp
@@ -14,7 +14,7 @@ services:
      - ./influxdb/config/:/etc/influxdb/
 
   grafana:
-    image: grafana/grafana:latest
+    image: grafana/grafana:8.5.2
     depends_on:
       - influxdb
     volumes:
