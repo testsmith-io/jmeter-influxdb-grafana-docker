@@ -1,0 +1,2 @@
+CREATE DATABASE "jmeter_results"
+CREATE DATABASE "collectd" WITH DURATION 21d

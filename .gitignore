@@ -1,6 +1,7 @@
 .idea
-influxdb/
-!influxdb/influx_init.iql
+influxdb/config/
+influxdb/data/
+influxdb/types.db/
 .DS_Store
 jmeter-scripts/results
 jmeter.log
