@@ -1,7 +1,7 @@
 version: '3.5'
 services:
   influxdb:
-    image: influxdb:1.8.10-alpine
+    image: influxdb:1.8.10
     ports:
      - "8086:8086"
      - 25826:25826/udp
