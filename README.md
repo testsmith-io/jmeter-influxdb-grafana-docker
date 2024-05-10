@@ -1,11 +1,11 @@
 # JMeter InfluxDB Grafana Docker container
 
-This is a container setup that allows you to immediately synchronize JMeter results with InfluxDB and visualize what is happening in realtime.
+This container setup allows you to immediately synchronize JMeter results with InfluxDB and visualize what is happening in real time.
 
 ![Grafana Dashboard](docs/images/Grafana.png)
 
 ## Prerequisites
-Ensure both docker and docker-compose are installed.
+Please make sure both docker and docker-compose are installed.
 
 ## Build JMeter docker image
 `docker build -t jmeter jmeter-docker`
@@ -48,3 +48,9 @@ It is the concatenation of `CLIENTNAME` and `STARTDATETIME`.
 
 ## Disclaimer
 Inspired by https://www.blazemeter.com/blog/make-use-of-docker-with-jmeter-learn-how
+
+# Support This Project
+
+If you find this project useful and want to support its ongoing development, consider <a href="https://www.buymeacoffee.com/roydekleijn"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=roydekleijn&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff" /></a>!
+
+I appreciate your support!
